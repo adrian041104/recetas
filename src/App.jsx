@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Receta from './componentes/Recetas.jsx';
 import Inicio from "./componentes/Inicio.jsx";
+import Doble from './componentes/Doble.jsx';
 
 function App() {
   return (
@@ -32,6 +33,9 @@ function App() {
                 <li className="nav-item">
                   <Link className="nav-link" to="/Recetas">Recetas</Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/Doble">Doble</Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -40,6 +44,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/Recetas" element={<Receta />} />
+          <Route path="/Doble" element={<Doble />} />
         </Routes>
       </div>
     </Router>
